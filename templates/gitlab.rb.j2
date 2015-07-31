@@ -21,5 +21,10 @@ gitlab_rails['ldap_password'] = '{{ gitlab_ldap_password }}'
 gitlab_rails['ldap_allow_username_or_email_login'] = true
 gitlab_rails['ldap_base'] = '{{ gitlab_ldap_base }}'
 
+gitlab_rails['gitlab_default_can_create_group'] = false
+gitlab_rails['gitlab_default_projects_features_visibility_level'] = private
+gitlab_rails['gitlab_username_changing_enabled'] = false
+gitlab_rails['time_zone'] = "Europe/Moscow"
+
 # To change other settings, see:
 # https://gitlab.com/gitlab-org/omnibus-gitlab/blob/master/README.md#changing-gitlab-yml-settings

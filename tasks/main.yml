@@ -15,9 +15,7 @@
   when: ansible_os_family == 'RedHat'
 
 - name: Install GitLab rpm (RedHat).
-  command: >
-    rpm --nosignature -i {{ gitlab_package_url }}
-    creates=/usr/bin/gitlab-ctl
+  yum: name={{ gitlab_package_url }} state=present
   when: ansible_os_family == 'RedHat'
 
 # Install GitLab and its dependencies (Debian).
